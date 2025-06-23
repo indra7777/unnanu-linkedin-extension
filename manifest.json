@@ -1,0 +1,35 @@
+{
+    "manifest_version": 3,
+    "name": "LinkedIn Extractor - Unnanu",
+    "description": "LinkedIn extractor that collects data from profiles and sends them back to Unnanu's API",
+    "version": "1.6.7",
+    "permissions": [
+        "storage",
+        "tabs",
+        "activeTab",
+        "scripting" 
+    ],
+    "host_permissions": [
+        "https://*.unnanu.com/*",
+        "https://www.linkedin.com/*"
+    ],    
+    "icons": {
+        "16": "/images/icon-1.png",
+        "48": "/images/icon-2.png",
+        "128": "/images/icon-3.png"
+    },
+    "action": {
+        "default_title": "LinkedIn Extractor - Unnanu",
+        "default_popup": "index.html"
+    },
+    "background": {
+        "service_worker": "background.js"
+    },
+    "content_scripts": [{
+        "matches": ["https://www.linkedin.com/*"],
+        "js": ["content.js"],
+        "run_at": "document_idle"
+    }]
+    
+}
+

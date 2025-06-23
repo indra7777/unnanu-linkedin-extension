@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "@azure/storage-blob": "^12.16.0",
+    "bootstrap": "^5.2.2",
+    "crx-hotreload": "^1.0.6",
+    "jquery": "^3.7.1",
+    "supabase": "^1.17.4"
+  }
+}
